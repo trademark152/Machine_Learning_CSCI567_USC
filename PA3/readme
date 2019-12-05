@@ -1,0 +1,14 @@
+CSCI567 PA3:
+X:                  N * D_in
+W:                D_in * D_out
+b: 1 * D_out or     N * D_out
+gradW:            D_in * D_out
+gradb: 1 * D_out  or N * D_out
+grad:               N * D_out
+forward_output:     N * D_out
+backward output:    N * D_in
+
+
+model:
+- params = dict() with keys: 'W','b'
+- gradient = dict() with keys: 'W','b'
