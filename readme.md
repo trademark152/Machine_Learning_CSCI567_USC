@@ -7,11 +7,11 @@ Python is the programming language used here
 ## 1. How to navigate and run
 
 ## 2. Files
-### 1) HW1: KNN and Decision Tree </li>
--Task 1: K-nearest neighbors
+### 1) HW1: KNN and Decision Tree
+- Task 1: K-nearest neighbors
 I initialize the KNN class with hyperparameters k and method of calculating distance. Min-max scaling and normalization are also performed during data preprocessing
 
--Task 2: Decision tree
+- Task 2: Decision tree
 I coded an object named DecisionTree with the following attributes: node object, feature dimension and functions: train, predict.
 
 ### 2) HW2: Regression and Classification
@@ -27,14 +27,13 @@ I implemented neural networks via a multilayer perceptron architecture. I use th
 ### 4) HW4: K-means and HMM
 - Task 1: K-means clustering
 4 minitasks are performed:
-<ul>
-<li> Implement K-means clustering algorithm to identify clusters in a two-dimensional toy-dataset. </li>
-<li> Implement image compression using K-means clustering algorithm </li>
-<li> Implement classification using the centroids identified by clustering on digits dataset </li>
-<li> Implement K-means++ clustering algorithm to identify clusters in a two-dimensional toy-dataset </li>
-</ul>
+  <ul>
+    <li> Implement K-means clustering algorithm to identify clusters in a two-dimensional toy-dataset. </li>
+    <li> Implement image compression using K-means clustering algorithm </li>
+    <li> Implement classification using the centroids identified by clustering on digits dataset </li>
+    <li> Implement K-means++ clustering algorithm to identify clusters in a two-dimensional toy-dataset </li>
+  </ul>
 - Task 2: Hidden Markov Model
 I implemented a HMM to solve Part-of-Speech Tagging problem. Two algorithms are used for evaluation problem: the forward algorithm or the backwards algorithm.  Based on the result of forward algorithm and backward algorithm, I calculate sequence probability and posterior probability. For decoding I implement the Viterbi algorithm.
 
-</ol>
 ![Machine Learning](ml.jpg)
