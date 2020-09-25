@@ -9,11 +9,14 @@ Python is the programming language used here
 ## 2. Files
 ### 1) HW1: KNN and Decision Tree
 - Task 1: K-nearest neighbors
+
 I initialize the KNN class with hyperparameters k and method of calculating distance. Min-max scaling and normalization are also performed during data preprocessing
+![Machine Learning](/graphic/knn.jpg)
 
 - Task 2: Decision tree
-I coded an object named DecisionTree with the following attributes: node object, feature dimension and functions: train, predict.
 
+I coded an object named DecisionTree with the following attributes: node object, feature dimension and functions: train, predict.
+![Machine Learning](/graphic/decisiontree.png)
 ### 2) HW2: Regression and Classification
 - Task 1: Regression
 I implemented Linear and Polynomial Regression from scratch. Regularization is included as part of the package. My code is also capable of dealing with non-invertible matrix.
@@ -22,6 +25,7 @@ I implemented Linear and Polynomial Regression from scratch. Regularization is i
 I implemented both binary and multiclass classification. Firstly, binary classification with different loss functions (Perceptron and Logistic) is implemented. Secondly, multiclass classification (Stochastic gradient descent and gradient descent) is coded and different methods' performances are compared. Matrix computation and One-hot representation are utilized to optimize the performance.
 
 ### 3) HW3: Multilayer Perceptron and Neural Network
+
 I implemented neural networks via a multilayer perceptron architecture. I use this neural network to classify MNIST database of handwritten digits (0-9). Cross-entropy loss is coded to handle k-class classification problem. I perform error-backpropagation by devising a way to compute partial derivatives (or gradients) w.r.t the parameters of a neural network, and use gradient-based optimization to learn the parameters.
 
 ### 4) HW4: K-means and HMM
@@ -36,4 +40,4 @@ I implemented neural networks via a multilayer perceptron architecture. I use th
 - Task 2: Hidden Markov Model
 I implemented a HMM to solve Part-of-Speech Tagging problem. Two algorithms are used for evaluation problem: the forward algorithm or the backwards algorithm.  Based on the result of forward algorithm and backward algorithm, I calculate sequence probability and posterior probability. For decoding I implement the Viterbi algorithm.
 
-![Machine Learning](ml.jpg)
+![Machine Learning](/graphic/ml.jpg)
