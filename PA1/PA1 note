@@ -1,0 +1,73 @@
+1) utils.py
+For decision tree
+- Information_Gain(branches)
+- reduced_error_pruning(decisionTree, X_test, y_test)
+- print_tree(decisionTree, node=None, name='branch 0', indent='', deep=0)
+
+For kNN
+- f1_score(real_labels: List[int], predicted_labels: List[int]) -> float
+calculate f1_score
+input: real and predicted labels as list of input
+output: f1_score as float
+
+- distance(point1: List[float], point2: List[float]) -> float)
+calculate different kinds of distance
+input: 2 points as list of floats
+output: distance as float
+
+- class NormalizationScaler: normalize the feature vector for each sample based on each sample ONLY
+def __call__(self, features: List[List[float]]) -> List[List[float]]
+
+- class MinMaxScaler: normalize the feature vector for each sample based on whole dataset range
+def __call__(self, features: List[List[float]]) -> List[List[float]]
+
+1) hw1_knn.py
+- class kNN
+
+  def __init__(self, k: int, distance_function)
+    initialize the class with hyperparameters k and method of calculating distance
+  def train(self, features: List[List[float]], labels: List[int])
+    import training data (features + label) into class
+  def predict(self, features: List[List[float]]) -> List[int]
+    predict input features, output is labels
+  def get_k_neighbors(self, point)
+    get labels of k nearest neighbors of a point
+    input: a point (List of float); output: list of labels of nearest neighbors (List of int)
+  def get_label_from_kNN(self, kNearestLabels)
+    get majority votes from k nearest neighbors' labels
+  def model_selection_without_normalization(distance_funcs, Xtrain, ytrain, f1_score, Xval, yval, Xtest, ytest)
+  def model_selection_with_transformation(distance_funcs,scaling_classes, Xtrain, ytrain, f1_score, Xval, yval, Xtest, ytest):
+  def test_classify(model)
+    specify distance functions
+    import dataset
+    divide dataset into training, testing and validating
+    do a classification with a given model by training then test with validation data
+    test with test data to obtain accuracy
+
+- main
+  initialize a model by model = KNN(k, func)
+  def test_classify(model): test it
+
+2) Decision Tree:
+  - Data structure
+    ~ Features: list of list of float: [[feature1], [feature2],...]=[[attribute1,attribute2,...],[attribute1,attribute2,...],...]
+    ~ Labels: list of int: [label1, label2,...]
+    ~ DecisionTree: object with following properties:
+      # clf_name: string: classification named
+      # root_node: TreeNode object
+      # feature_dim: dimension of features input (number of attributes within a feature)
+      # def train(self, features, labels): train the tree using given features and labels
+      # def predict(self, features): predict using the given tree and input features
+    ~ TreeNode:
+      # features:
+      # labels:
+      # children: list of [TreeNode]
+      # num_cls: int: number of classes present in the subset
+      # cls_max: int: label corresponding to the class with highest count
+      # splittable: T/F: if the node is splittable or not
+      # dim_split: int: index of the feature to be split
+      # feature_uniq_split: list of float: possible unique values of features to be split
+      # def split(self): split the current node
+      # def predict(self, feature): predict the branch or the class
+    ~ root_node --> [childen_node1, childen_node2,...]
+    ~ branches = [branch1, branch2,...] = [[class1_count, class2_count,...], [class1_count, class2_count,...]]
